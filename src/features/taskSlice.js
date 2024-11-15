@@ -5,9 +5,11 @@ const taskSlice = createSlice({
   initialState: [],
   reducers: {
     addTask: (state, action) => {
+      const { title, date } = action.payload;
       state.push({
         id: Date.now(),
-        title: action.payload,
+        title,
+        date,
         completed: false,
       });
     },

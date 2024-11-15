@@ -4,12 +4,15 @@ import { addTask } from "../features/taskSlice";
 
 const TaskInput = () => {
   const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
   const dispatch = useDispatch();
 
-  const handleAddTask = () => {
-    if (title.trim()) {
-      dispatch(addTask(title));
+  const handleAddTask = (e) => {
+    e.preventDefault();
+    if (title.trim() && date.trim()) {
+      dispatch(addTask({ title, date }));
       setTitle("");
+      setDate("");
     }
   };
 
@@ -21,6 +24,12 @@ const TaskInput = () => {
         placeholder="Enter Task Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+      />
+      <input
+        type="date"
+        placeholder="Enter Deadline"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
       />
       <button type="submit">Add</button>
     </form>
