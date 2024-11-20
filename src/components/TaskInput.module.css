@@ -1,0 +1,22 @@
+.form {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.taskInput {
+  width: 250px;
+  border: none;
+}
+
+.addBtn {
+  border: none;
+  background-color: #91bcea;
+  padding: 2px;
+  background-color: aliceblue;
+  border: 1px;
+  border-radius: 5px;
+}

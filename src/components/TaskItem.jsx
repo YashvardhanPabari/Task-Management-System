@@ -21,8 +21,8 @@ const TaskItem = ({ task }) => {
         }}
         onClick={handleToggle}
       >
-        <span>{`Task: ${task.title}`}</span>
-        <span>{`Deadline: ${task.date}`}</span>
+        <span>{`${task.title}`}</span>
+        <span>{`${task.date}`}</span>
         <button onClick={handleDelete}>X</button>
       </div>
     </li>
