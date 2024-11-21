@@ -12,11 +12,21 @@
   border: none;
 }
 
+.dateInput {
+  width: 150px;
+}
+
 .addBtn {
   border: none;
   background-color: #91bcea;
   padding: 2px;
   background-color: aliceblue;
-  border: 1px;
+  border: 1px solid;
   border-radius: 5px;
+}
+
+.addBtn:hover {
+  cursor: pointer;
+  background-color: #81c2e1; /* Slightly darker blue on hover */
+  border-color: #6ea9c1;
 }

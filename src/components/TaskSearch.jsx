@@ -15,6 +15,7 @@ const TaskSearch = ({ onSearch }) => {
         placeholder="Search tasks..."
         value={searchTerm}
         onChange={handleSearchChange}
+        style={{ borderRadius: "5px", border: "none" }}
       />
     </div>
   );

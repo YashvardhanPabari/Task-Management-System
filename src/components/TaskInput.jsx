@@ -32,6 +32,7 @@ const TaskInput = () => {
 
       <div>
         <input
+          className={styles.dateInput}
           type="date"
           placeholder="Enter Deadline"
           value={date}

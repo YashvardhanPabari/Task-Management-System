@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deleteTask, toggleTask } from "../features/taskSlice";
+import styles from "./TaskItem.module.css";
 
 const TaskItem = ({ task }) => {
   const dispatch = useDispatch();
@@ -15,10 +16,7 @@ const TaskItem = ({ task }) => {
   return (
     <li>
       <div
-        style={{
-          textDecoration: task.completed ? "line-through" : "none",
-          cursor: "pointer",
-        }}
+        className={`${styles.item} ${task.completed ? styles.completed : ""}`}
         onClick={handleToggle}
       >
         <span>{`${task.title}`}</span>
