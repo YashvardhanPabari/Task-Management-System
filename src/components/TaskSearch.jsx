@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./TaskSearch.module.css";
 
 const TaskSearch = ({ onSearch }) => {
   const [searchTerm, setSeachTerm] = useState("");
@@ -9,8 +10,9 @@ const TaskSearch = ({ onSearch }) => {
   };
 
   return (
-    <div>
+    <div className={styles.searchContainer}>
       <input
+        className={styles.search}
         type="text"
         placeholder="Search tasks..."
         value={searchTerm}
